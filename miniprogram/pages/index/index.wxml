@@ -1,0 +1,32 @@
+<view class="container">
+  <view class="light-bg light-1"></view>
+  <view class="light-bg light-2"></view>
+  <view class="light-bg light-3"></view>
+  
+  <view class="header">
+    <view class="title-group">
+      <text class="main-title">时光盒</text>
+      <text class="sub-title">TIME BOX</text>
+    </view>
+    <view class="header-btns">
+      <button class="add-btn" bindtap="onCreateAlbum">+ 创建</button>
+      <button class="join-btn" bindtap="onJoinAlbum">加入</button>
+    </view>
+  </view>
+
+  <view class="album-list">
+    <block wx:for="{{albums}}" wx:key="_id">
+      <view class="album-card glass-effect" bindtap="goDetail" bindlongpress="onDeleteAlbum" 
+          data-id="{{item._id}}" 
+          data-name="{{item.name}}">
+        <view class="card-content">
+          <view class="info-section">
+            <text class="album-name">{{item.name}}</text>
+            <text class="member-tag">{{item.memberCount || 1}} 人共享</text>
+          </view>
+          <view class="circle-arrow"></view>
+        </view>
+      </view>
+    </block>
+  </view>
+</view>

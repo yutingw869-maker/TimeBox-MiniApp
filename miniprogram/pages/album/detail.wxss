@@ -1,0 +1,76 @@
+.container { min-height: 100vh; position: relative; background: var(--bg-gradient-light) !important; padding-bottom: 60rpx; }
+
+/* 封面区域样式 */
+.cover-section { position: relative; width: 100%; height: 460rpx; background: #fdfcfc; }
+.cover-wallpaper { width: 100%; height: 100%; }
+.cover-mask { position: absolute; bottom: 0; width: 100%; height: 160rpx; background: linear-gradient(to top, rgba(0,0,0,0.4), transparent); }
+.cover-hint { position: absolute; top: 30rpx; left: 30rpx; background: rgba(0,0,0,0.3); color: white; font-size: 20rpx; padding: 6rpx 18rpx; border-radius: 20rpx; backdrop-filter: blur(5px); }
+
+.user-info-box { position: absolute; right: 30rpx; bottom: -40rpx; display: flex; align-items: flex-end; }
+.album-text { text-align: right; margin-right: 24rpx; padding-bottom: 50rpx; }
+.album-name-main { color: white; font-size: 46rpx; font-weight: bold; text-shadow: 0 4rpx 12rpx rgba(0,0,0,0.4); }
+.mini-invite-btn { margin-top: 10rpx; font-size: 35rpx; background: #2ecc71; color: white; border-radius: 40rpx; padding: 5 5rpx; line-height: 44rpx; }
+.creator-avatar { width: 150rpx; height: 150rpx; border-radius: 24rpx; border: 6rpx solid white; box-shadow: 0 8rpx 20rpx rgba(0,0,0,0.1); }
+
+/* 成员栏 */
+.members-bar { margin: 20rpx 30rpx 20rpx; padding: 24rpx 30rpx; border-radius: 32rpx; display: flex; justify-content: space-between; align-items: center; background: rgba(255,255,255,0.6); backdrop-filter: blur(10px); border: 1rpx solid rgba(255,255,255,0.8); }
+.bar-label { font-size: 24rpx; color: #95a5a6; font-weight: 600; }
+.stack-count { font-size: 24rpx; color: #2ecc71; font-weight: bold; }
+
+/* 照片网格 */
+.photo-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 15rpx; padding: 0 30rpx; }
+.date-tag { grid-column: span 3; font-size: 30rpx; font-weight: bold; color: #34495e; margin: 40rpx 0 10rpx; padding-left: 10rpx; border-left: 8rpx solid #2ecc71; }
+.photo-item { width: 225rpx; height: 225rpx; border-radius: 16rpx; position: relative; overflow: hidden; background: #fff; box-shadow: 0 4rpx 15rpx rgba(0,0,0,0.05); }
+
+.add-box { border: 4rpx dashed #bdc3c7; display: flex; flex-direction: column; align-items: center; justify-content: center; background: rgba(255,255,255,0.5); }
+.plus { font-size: 60rpx; color: #bdc3c7; line-height: 1; }
+.add-text { font-size: 22rpx; color: #bdc3c7; margin-top: 10rpx; }
+
+.img { width: 100%; height: 100%; }
+.del-tag { position: absolute; top: 10rpx; right: 10rpx; background: rgba(231, 76, 60, 0.7); color: white; width: 40rpx; height: 40rpx; text-align: center; line-height: 36rpx; border-radius: 50%; font-size: 30rpx; backdrop-filter: blur(4px); }
+
+.share-id-bar {
+  margin: 20rpx 30rpx;
+  padding: 24rpx 30rpx;
+  border-radius: 30rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.4) !important;
+  border: 1rpx solid rgba(255, 255, 255, 0.6) !important;
+}
+
+.label {
+  font-size: 20rpx;
+  color: #7f8c8d;
+  display: block;
+  margin-bottom: 6rpx;
+}
+
+.id-text {
+  font-size: 26rpx;
+  font-weight: bold;
+  color: #2c3e50;
+  letter-spacing: 1rpx;
+}
+
+.copy-icon {
+  font-size: 32rpx;
+  opacity: 0.5;
+}
+
+/* 首页按钮组样式 */
+.header-btns {
+  display: flex;
+  gap: 15rpx;
+}
+
+.join-btn {
+  margin: 0 !important;
+  background: rgba(255, 255, 255, 0.5) !important;
+  color: #2c3e50 !important;
+  border-radius: 40rpx !important;
+  font-size: 26rpx !important;
+  padding: 16rpx 32rpx !important;
+  border: 1rpx solid rgba(163, 206, 255, 0.4) !important;
+}

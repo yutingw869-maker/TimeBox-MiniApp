@@ -1,0 +1,53 @@
+<view class="container">
+  <view class="light-bg light-1"></view>
+  <view class="light-bg light-2"></view>
+  <view class="light-bg light-3"></view>
+
+  <view class="cover-section" bindtap="onChooseCover">
+    <image class="cover-wallpaper" src="{{albumInfo.coverUrl || '/images/default-bg.jpg'}}" mode="aspectFill"></image>
+    <view class="cover-mask"></view>
+    <view class="cover-hint">点击更换封面</view>
+    
+    <view class="user-info-box">
+      <view class="album-text">
+        <text class="album-name-main">{{albumName}}</text>
+      </view>
+    </view>
+  </view>
+
+  <view class="share-id-bar glass-effect" bindtap="onCopyID">
+    <view class="bar-left">
+      <text class="label">该相册唯一邀请码 (复制发送给好友)</text>
+      <text class="id-text">{{albumId}}</text>
+    </view>
+    <view class="copy-icon">📋</view>
+  </view>
+
+  <view class="members-bar glass-effect">
+    <view class="bar-left">
+      <text class="bar-label">共享成员</text>
+      <text class="stack-count"> ({{albumInfo.memberCount || 1}}人)</text>
+    </view>
+    <view class="exit-btn" bindtap="onExitAlbum">取消共享</view>
+  </view>
+
+  <view class="photo-grid">
+    <view class="photo-item add-box" bindtap="onUploadPhoto">
+      <view class="plus-icon"><text class="plus-text">+</text></view>
+      <text class="add-text">导入照片</text>
+    </view>
+
+    <block wx:for="{{groupedPhotos}}" wx:for-item="group" wx:key="date">
+      <view class="date-tag">
+        <text class="date-text">{{group.date}}</text>
+      </view>
+      <block wx:for="{{group.list}}" wx:key="_id">
+        <view class="photo-item">
+          <image class="img" src="{{item.fileID}}" mode="aspectFill" 
+                 bindtap="onPreview" bindlongpress="onSavePhoto" data-url="{{item.fileID}}"></image>
+          <view class="del-tag" catchtap="onDeletePhoto" data-id="{{item._id}}" data-fileid="{{item.fileID}}">×</view>
+        </view>
+      </block>
+    </block>
+  </view>
+</view>
