@@ -1,6 +1,7 @@
 # 时光盒 (Time Box) - AI 驱动的全栈共享相册小程序
 
-![项目演示](你的图片链接，可以放刚才那张截图)
+![项目演示]<img width="1170" height="2532" alt="微信图片_20260507191021_43549_1" src="https://github.com/user-attachments/assets/e26f5a6e-3dac-4afd-9d77-f62946cce9bf" />
+
 
 ## 🌟 项目简介
 本项目是一个基于微信小程序云开发（Serverless）实现的共享相册应用。项目采用 **Vibe Coding (AI 辅助编程)** 模式，利用 Gemini 1.5 Pro 进行架构设计与逻辑调试，实现了从需求定义到 ICP 备案落地的全流程。
