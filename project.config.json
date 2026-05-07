@@ -32,7 +32,7 @@
     "include": []
   },
   "miniprogramRoot": "miniprogram/",
-  "appid": "wx6cc27c037068cd0d",
+  "appid": "", //add your id
   "editorSetting": {
     "tabIndent": "insertSpaces",
     "tabSize": 2
